@@ -1,0 +1,50 @@
+body{
+    background-color: rgb(233, 204, 236);
+}
+descripcion{
+    margin-top: 1em;
+}
+#secciondeinicio img{
+    height: 700px;
+}
+.opacidad{
+    background: rgba(233, 236, 239, 0.6);
+}
+#carouseldegaleria img{
+    height: 500px;
+    border-radius: 50px;
+    padding: 5px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+.espcio1 {
+    margin-left: 5px;
+}
+.giftamaño img{
+    height: 200px;
+    margin-left: 50px !important;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+}
+.abajo {
+    margin-bottom: 20px;
+}
+.imagenborde img{
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.margenes img{
+    margin-right: 70px;
+    margin-left: 70px;
+}
