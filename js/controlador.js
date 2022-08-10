@@ -1,4 +1,5 @@
 var valorAnterior = "";
+var resulAnterior = "";
 var primerNumero;
 var segundoNumero;
 var operacion;
@@ -61,7 +62,7 @@ function init() {
   };
 
   eliminar.onclick = function (e) {
-    resultado.value  = (resultado.value).slice(0,-1)
+    resultado.value = resultado.value.slice(0, -1);
   };
 
   AC.onclick = function (e) {
@@ -94,7 +95,11 @@ function init() {
 
   igual.onclick = function (e) {
     segundoNumero = resultado.value;
-    solucion();
+    if (resulAnterior != 0) {
+      resultado.value = resulAnterior;
+    } else {
+      solucion();
+    }
   };
 
   function solucion() {
@@ -102,22 +107,31 @@ function init() {
     switch (operacion) {
       case "+":
         solu = parseFloat(primerNumero) + parseFloat(segundoNumero);
-        break
+        break;
       case "-":
         solu = parseFloat(primerNumero) - parseFloat(segundoNumero);
-        break
+        break;
       case "*":
         solu = parseFloat(primerNumero) * parseFloat(segundoNumero);
-        break
+        break;
       case "/":
         solu = parseFloat(primerNumero) / parseFloat(segundoNumero);
-        break
+        break;
     }
-    resultado.value = solu
+    reiniciarValues();
+    resultado.value = solu;
+    resulAnterior = solu;
   }
 
   function limpiar() {
     resultado.value = "";
     valorAnterior = "";
+    resulAnterior = "";
+  }
+
+  function reiniciarValues() {
+    primerNumero = 0;
+    segundoNumero = 0;
+    operacion = "";
   }
 }
